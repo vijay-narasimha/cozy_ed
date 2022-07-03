@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CozyEd</title>
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/slider.css">
+    <link rel="stylesheet" href="/css/mycss.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <!--Slider-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-container">
+            <div>
+                <a class="navbar-brand" href="/">CozyEd</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/events">Events</a>
+                    </li>
+                 
+                   
+                    <% if(user){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/profile">Hello <%=user.name %></a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link logoutbtn" >logout</a>
+                        </li> 
+                        <% }else{ %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup">Sign Up</a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="/images/1.jpg" alt="First slide">
+                <div class="carousel-caption d-md-block">
+                    <h5>CODING</h5>
+                    <p>Make it work, make it right, make it fast.</p>
+                    <p><a href="#">More Info</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/images/2.jpeg" alt="Second slide">
+                <div class="carousel-caption d-md-block">
+                    <h5>PROJECTS</h5>
+                    <p>We get on top of every roofing project.</p>
+                    <p><a href="#">More Info</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/images/3.webp" alt="Third slide">
+                <div class="carousel-caption d-md-block">
+                    <h5>APTITUDE</h5>
+                    <p>Aptitude without attitude is blind.</p>
+                    <p><a href="/aptitude">More Info</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/images/4.jpeg" alt="Fourth slide">
+                <div class="carousel-caption d-md-block">
+                    <h5>RESUME</h5>
+                    <p>Strive not to be success, but rather to be value.</p>
+                    <p><a href="#">More Info</a></p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!--Coding Websites-->
+    <div class="web-container">
+        <h1>Roadmaps of different fields</h1>
+        <div class="website-container">
+            <div class="gallery">
+                <a href="/frontend-roadmap">
+                <img src="/images/codechef.png">
+                <div class="desc">Front End</div></a>
+            </div>
+            <div class="gallery">
+                <a href="/backend-roadmap">
+                <img src="/images/codeforce.jpg">
+                <div class="desc">Back End</div></a>
+            </div>
+            <div class="gallery">
+                <a href="/fullstack-roadmap">
+                <img src="/images/cd1.png">
+                <div class="desc">Full Stack</div></a>
+            </div>
+            <div class="gallery">
+                <a href="/android-roadmap">
+                <img src="/images/gfg.jpg">
+                <div class="desc">Android</div></a>
+            </div>
+            <div class="gallery">
+                <a href="front-end.html">
+                <img src="/images/interbit.png">
+                <div class="desc">Angular</div></a>
+            </div>
+            <div class="gallery">
+                <a href="front-end.html">
+                <img src="/images/leetcode.png">
+                <div class="desc">React</div></a>
+            </div>
+        </div>
+        
+        <h1>Coding Competitions</h1>
+        <h2>Weekly Competition</h2>
+
+        <div class="website-container">
+            <div class="gallery1">
+                <img src="/images/codestat.jpg">
+                <div class="desc"><a href="https://www.codechef.com/START21">Code Chef Starters</a></div>
+            </div>
+            <div class="gallery1">
+                <img src="/images/ninja.jpg">
+                <div class="desc"><a href="https://www.codingninjas.com/codestudio/contests">Coding Ninja</a></div>
+            </div>
+            <div class="gallery1">
+                <img src="/images/codefor.jpg">
+                <div class="desc"><a href="https://codesignal.com/">Code Signal</a></div>
+            </div>
+        </div>
+        <h2>Monthly Competition</h2>
+        <div class="website-container">
+            <div class="gallery1">
+                <img src="/images/cookof.jpg">
+                <div class="desc"><a href="https://www.codechef.com/COOK139">Code Chef Cook-Off</a></div>
+            </div>
+            <div class="gallery1">
+                <img src="/images/long.jpg">
+                <div class="desc"><a href="https://www.codechef.com/tags/problems/long-challenge">Code Chef Long
+                        Challenge</a>
+                </div>
+            </div>
+            <div class="gallery1">
+                <img src="/images/lunch.jpg">
+                <div class="desc"><a href="https://www.codechef.com/LTIME96">Code Chef Lunch Time</a></div>
+            </div>
+        </div>
+        <h2>Yearly Competition</h2>
+        <div class="website-container">
+            <div class="gallery1">
+                <img src="/images/hash.jpg">
+                <div class="desc"><a href="https://codingcompetitions.withgoogle.com/hashcode/">Google Hash Code</a>
+                </div>
+            </div>
+            <div class="gallery1">
+                <img src="/images/kick.png">
+                <div class="desc"><a href="https://codingcompetitions.withgoogle.com/kickstart">Kick Start</a></div>
+            </div>
+            <div class="gallery1">
+                <img src="/images/jam.png">
+                <div class="desc"><a href="https://codingcompetitions.withgoogle.com/codejam">Code Jam</a></div>
+            </div>
+        </div>
+   
+        <h1>Project tutorials</h1>
+
+        <div class="website-container">
+            <div class="gallery">
+                <img src="/images/ct1.png">
+                <div class="desc"><a
+                        href="https://www.youtube.com/watch?v=EjavYOFoJJ0&list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S">Front End</a>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="/images/ct2.jpg">
+                <div class="desc"><a href="https://www.youtube.com/watch?v=tvC1WCdV1XU&list=PLAE85DE8440AA6B83">Back End</a>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="/images/ct3.png">
+                <div class="desc"><a
+                        href="https://www.youtube.com/watch?v=VHbSopMyc4M&list=PLBlnK6fEyqRjKA_NuK9mHmlk0dZzuP1P5">Full Stack</a>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="/images/ct4.jpg">
+                <div class="desc"><a
+                        href="https://www.youtube.com/watch?v=QXeEoD0pB3E&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3">Android</a>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="/images/ct5.png">
+                <div class="desc"><a
+                        href="https://www.youtube.com/watch?v=AT14lCXuMKI&list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU">Angular</a>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="/images/ct6.jpg">
+                <div class="desc"><a
+                        href="https://www.youtube.com/watch?v=MY3jR-a29JI&list=PLyqSpQzTE6M9p9pKxFGpskf4voY45T2DZ">React</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer section-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Online Courses</a></li>
+                        <li><a href="#">Previous Sessions</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Learn</h4>
+                    <ul>
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">C++</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Aptitude</a></li>
+                        <li><a href="#">Technical Skills</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

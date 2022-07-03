@@ -1,0 +1,12 @@
+.roadmap-image{
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+}
+.roadmap{
+    width:100%;
+}
+
+.container{
+    padding-top: 65px;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "cozy_ed",
+  "version": "1.0.0",
+  "description": "Website which helps a student to develop from beginner to professional level for jobs",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "code geeks",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "cheerio": "^1.0.0-rc.12",
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "html-to-text": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.1",
+    "nodemailer": "^6.7.6",
+    "nodemon": "^2.0.18"
+  }
+}

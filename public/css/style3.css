@@ -1,0 +1,29 @@
+.web-container{
+    background:linear-gradient(45deg, blueviolet, lightgreen);
+    padding: 15px 9%;
+    padding-bottom: 150px;
+    
+}
+.website-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 1000px;
+    margin:auto;
+    background: #f2f5f7;
+    overflow: auto;
+    padding: 60px 0;
+}
+.desc{
+    padding: 10px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(10, 9, 17);
+}
+h2{
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(49, 47, 49);
+}
