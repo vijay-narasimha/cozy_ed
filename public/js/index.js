@@ -19,7 +19,7 @@ const login = async (email, password) => {
 	try {
 		const res = await axios({
 			method: "POST",
-			url: "http://localhost:5000/api/users/login",
+			url: "https://cozyed.herokuapp.com/api/users/login",
 			data: {
 				email,
 				password,
@@ -43,7 +43,7 @@ const signup = async (name, email, password) => {
 	try {
 		const res = await axios({
 			method: "POST",
-			url: "http://localhost:5000/api/users/signup",
+			url: "https://cozyed.herokuapp.com/api/users/signup",
 			data: {
 				name,
 				email,
@@ -67,7 +67,7 @@ const sendemail = async (email) => {
 	try {
 		const res = await axios({
 			method: "POST",
-			url: "http://localhost:5000/api/users/forgotpassword",
+			url: "https://cozyed.herokuapp.com/api/users/forgotpassword",
 			data: {
 				email,
 			},
@@ -134,7 +134,7 @@ const passwordreset = async (password, token) => {
 		console.log("passwod", password);
 		const res = await axios({
 			method: "POST",
-			url: `http://localhost:5000/api/users/resetpassword/${token}`,
+			url: `https://cozyed.herokuapp.com/api/users/resetpassword/${token}`,
 			data: {
 				password,
 			},
@@ -171,7 +171,7 @@ if (logoutbtn) {
 			console.log("clicked");
 			const res = await axios({
 				method: "GET",
-				url: `http://localhost:5000/api/users/logout`,
+				url: `https://cozyed.herokuapp.com/api/users/logout`,
 			});
 			if (res.data.status === "success") {
 				showAlert("success", "logout successful");
