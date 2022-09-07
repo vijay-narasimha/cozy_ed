@@ -1,4 +1,4 @@
-const { default: axios } = require("axios");
+
 
 const formLogin = document.querySelector("#form--login");
 
@@ -19,7 +19,8 @@ const showAlert = (type, msg) => {
 
 const localURL='http://localhost:5000';
 const URL='https://cozyed.herokuapp.com';
-const login = async (email, password) => {
+const login = async (email, password) => { 
+	console.log(email,password)
 	try {
 		const res = await axios({
 			method: "POST",
