@@ -46,3 +46,6 @@ exports.aptitude=(req,res)=>{
 exports.profile=(req,res)=>{
     res.render('profile')
 }
+exports.working=(req,res)=>{
+    res.render('working')
+}

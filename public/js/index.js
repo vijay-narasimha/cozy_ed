@@ -1,3 +1,5 @@
+const { default: axios } = require("axios");
+
 const formLogin = document.querySelector("#form--login");
 
 const formSignup = document.querySelector("#form--signup");
@@ -15,11 +17,13 @@ const showAlert = (type, msg) => {
 	window.setTimeout(hideAlert, 5000);
 };
 
+const localURL='http://localhost:5000';
+const URL='https://cozyed.herokuapp.com';
 const login = async (email, password) => {
 	try {
 		const res = await axios({
 			method: "POST",
-			url: "https://cozyed.herokuapp.com/api/users/login",
+			url: "/api/users/login",
 			data: {
 				email,
 				password,
@@ -41,9 +45,10 @@ const login = async (email, password) => {
 
 const signup = async (name, email, password) => {
 	try {
+		console.log(name,email,password)
 		const res = await axios({
 			method: "POST",
-			url: "https://cozyed.herokuapp.com/api/users/signup",
+			url: "/api/users/signup",
 			data: {
 				name,
 				email,
@@ -59,7 +64,7 @@ const signup = async (name, email, password) => {
 			showAlert("error", res.data.message);
 		}
 	} catch (err) {
-		showAlert("error", "error occured");
+		showAlert("error", "errors occured");
 	}
 };
 
@@ -67,7 +72,7 @@ const sendemail = async (email) => {
 	try {
 		const res = await axios({
 			method: "POST",
-			url: "https://cozyed.herokuapp.com/api/users/forgotpassword",
+			url: "/api/users/forgotpassword",
 			data: {
 				email,
 			},
@@ -100,7 +105,7 @@ if (formSignup) {
 		const email = document.querySelector("#email").value;
 		const password = document.querySelector("#password").value;
 		const confirmpassword = document.querySelector("#confirmpassword");
-
+console.log(name,email,password);
 		signup(name, email, password);
 	});
 }
@@ -134,7 +139,7 @@ const passwordreset = async (password, token) => {
 		console.log("passwod", password);
 		const res = await axios({
 			method: "POST",
-			url: `https://cozyed.herokuapp.com/api/users/resetpassword/${token}`,
+			url: `/api/users/resetpassword/${token}`,
 			data: {
 				password,
 			},
@@ -171,7 +176,7 @@ if (logoutbtn) {
 			console.log("clicked");
 			const res = await axios({
 				method: "GET",
-				url: `https://cozyed.herokuapp.com/api/users/logout`,
+				url: localURL+`/api/users/logout`,
 			});
 			if (res.data.status === "success") {
 				showAlert("success", "logout successful");
@@ -193,4 +198,6 @@ function scrollFunction() {
    
     document.getElementById("navbar").style.background = "none";
   }
-}
+} 
+
+

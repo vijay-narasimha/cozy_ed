@@ -16,4 +16,5 @@ Router.get("/backend-roadmap",viewController.backend)
 Router.get('/events',viewController.events)
 Router.get("/aptitude",viewController.aptitude)
 Router.get('/profile',viewController.profile)
+Router.get("/working",viewController.working)
 module.exports=Router;
