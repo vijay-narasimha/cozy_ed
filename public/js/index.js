@@ -177,7 +177,7 @@ if (logoutbtn) {
 			console.log("clicked");
 			const res = await axios({
 				method: "GET",
-				url: localURL+`/api/users/logout`,
+				url: `/api/users/logout`,
 			});
 			if (res.data.status === "success") {
 				showAlert("success", "logout successful");
